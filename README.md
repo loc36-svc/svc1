@@ -42,8 +42,8 @@ Service 1 is expected to be consumed by sensors or sensor proxies. Service reque
 	If the HTTP response code is 200, a JSON data would also be provided:
 
 		{
-			response: "{x}",
-			responseCode: "{y}"
+			"responseCode": "State updated successfully! ",
+			"response": "a"
 		}
 
 	This JSON data provides the response of the service request.
@@ -69,6 +69,8 @@ Building service 1 is as simple as downloading a release, then running:
 	go build
 
 in the directory of its source code.
+
+__Golang ver: 1.13__
 
 
 #### Deployment
