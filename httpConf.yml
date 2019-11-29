@@ -1,6 +1,4 @@
-# When deploying a software using function Conf (), the following should be done:
-#   this file should be copied to the directory of the software's executable;
-#   set the conf data, as appropriate.
+# Set the following data, as appropriate:
 
 # sds-related conf data
 sds:
