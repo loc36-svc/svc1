@@ -39,6 +39,7 @@ func init () {
 	}
 }
 
+// HTTP interface.
 func main () {
 	// Updating net addr with the SDS. ..1.. {
 	port, errX := strconv.Atoi (httpConf ["net_port"])
@@ -101,15 +102,20 @@ func main () {
 		IdleTimeout: idleTimeout,
 		MaxHeaderBytes: 1 << 20, // 1 MB
 	}
+	// ..1.. }
 
+	// Create router. ..1.. {
 	router := mux.NewRouter ()
 	router.HandleFunc ("/report", cntlr.Report).Methods ("POST")
+	// ..1.. }
 
+	// Attaching router to the interface
 	intf.Handler = router
 
 	notf := fmt.Sprintf ("HTTP interface addr: %s:%s [HTTPS]", httpConf ["net_addr"], httpConf ["net_port"])
 	str.PrintEtr (notf, "std", "main ()")
 
+	// Start HTTP interface.
 	errQ := intf.ListenAndServeTLS (httpConf ["tls_crt"], httpConf ["tls_key"])
 
 	if errQ != nil && errQ != http.ErrServerClosed {
@@ -120,11 +126,11 @@ func main () {
 	}
 }
 var (
-	sds map[string]string
-	httpConf map[string]string
-	db *sql.DB
+	sds map[string]string       // SDS conf
+	httpConf map[string]string  // HTTP interface conf
+	db *sql.DB                  // Conn to SDS.
 	serviceId = "1"
-	logBk = logBook.New (os.Stderr)
+	logBk = logBook.New (os.Stderr) // Std err
 )
 func init () {
 	// Loading conf. ..1.. {
