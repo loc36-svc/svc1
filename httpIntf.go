@@ -95,7 +95,7 @@ func main () {
 	}
 
 	intf := &http.Server {
-		Addr: fmt.Sprintf ("%s:%s", httpConf ["net_addr"], httpConf ["net_port"]),
+		Addr: fmt.Sprintf ("%s:%s", "0.0.0.0", httpConf ["net_port"]),
 		ReadTimeout: readTimeout,
 		ReadHeaderTimeout: readHeaderTimeout,
 		WriteTimeout: writeTimeout,
@@ -112,7 +112,7 @@ func main () {
 	// Attaching router to the interface
 	intf.Handler = router
 
-	notf := fmt.Sprintf ("HTTP interface addr: %s:%s [HTTPS]", httpConf ["net_addr"], httpConf ["net_port"])
+	notf := fmt.Sprintf ("HTTP interface addr: %s:%s [HTTPS]", "0.0.0.0", httpConf ["net_port"])
 	str.PrintEtr (notf, "std", "main ()")
 
 	// Start HTTP interface.
