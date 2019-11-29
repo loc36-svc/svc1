@@ -60,6 +60,12 @@ github.com/loc36-svc/svc1-http--cntlr v0.0.0-20191129022100-7101f21710c8 h1:BXfr
 github.com/loc36-svc/svc1-http--cntlr v0.0.0-20191129022100-7101f21710c8/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
 github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaA h1:3oTFQOcLddiGWDjBWY5crx5R0NICC2G8gDaEptYRm1g=
 github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaA/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaB h1:evM7UMuQE0blcH2wfIZPBjyxEpAxMESRE+pHM5NjfWo=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaB/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaC h1:AbbcxlOuIuGlikd4lFw32iw6c2T3flb1vwGefMsN0NQ=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaC/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0 h1:jzBeyIDKSNQXJt7uRyy4wcxaBtnMUsUP/T6p1bEHjdk=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
 github.com/loc36-svc/svc1-http--lib v0.3.0 h1:ZbO0cWt2pMGL2DaAdxGxLeW3hlFdtlXgojG7Skf7UVg=
 github.com/loc36-svc/svc1-http--lib v0.3.0/go.mod h1:6A8SwtbFFbiENwZqPcbdHg1iB/A3A2w7C5sy4A16wx0=
 github.com/loc36-svc/svc1-svc1--svc v0.5.0 h1:tsrzn6v5baxUftmvaNvPvk/THIP9S/jOwRFE6qOU/pw=
