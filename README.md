@@ -36,14 +36,14 @@ Service 1 is expected to be consumed by sensors or sensor proxies. Service reque
 
 #### Response:
 
-	Service 1 should ordinarily return HTTP response code 200, and if any other
-		code is returned. A fatal error should be assumed to have happened.
+	Service 1 should ordinarily return HTTP response code 200, but if any other
+		code is returned, a fatal error should be assumed to have happened.
 
 	If the HTTP response code is 200, a JSON data would also be provided:
 
 		{
-			"responseCode": "State updated successfully! ",
-			"response": "a"
+			"response": "State updated successfully! ",
+			"responseCode": "a"
 		}
 
 	This JSON data provides the response of the service request.

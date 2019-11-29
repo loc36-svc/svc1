@@ -68,6 +68,8 @@ github.com/loc36-svc/svc1-http--cntlr v0.1.0 h1:jzBeyIDKSNQXJt7uRyy4wcxaBtnMUsUP
 github.com/loc36-svc/svc1-http--cntlr v0.1.0/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
 github.com/loc36-svc/svc1-http--cntlr v0.2.0 h1:tQyEWJtKZMhDtNm9xz12s/CqHXkbwVDkFmLPKC3CnKQ=
 github.com/loc36-svc/svc1-http--cntlr v0.2.0/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
+github.com/loc36-svc/svc1-http--cntlr v0.3.0 h1:OA5lsZFV4uwFIm23F9j8HsFGMQoX6jMYg++njl3bpjU=
+github.com/loc36-svc/svc1-http--cntlr v0.3.0/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
 github.com/loc36-svc/svc1-http--lib v0.3.0 h1:ZbO0cWt2pMGL2DaAdxGxLeW3hlFdtlXgojG7Skf7UVg=
 github.com/loc36-svc/svc1-http--lib v0.3.0/go.mod h1:6A8SwtbFFbiENwZqPcbdHg1iB/A3A2w7C5sy4A16wx0=
 github.com/loc36-svc/svc1-svc1--svc v0.5.0 h1:tsrzn6v5baxUftmvaNvPvk/THIP9S/jOwRFE6qOU/pw=
