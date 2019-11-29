@@ -32,16 +32,16 @@ Service 1 is expected to be consumed by sensors or sensor proxies. Service reque
 
 #### Response:
 
-	service 1 should ordinarily return HTTP response code 200, and if any other code is returned. A fatal error should be assumed to have happened.
+	Service 1 should ordinarily return HTTP response code 200, and if any other code is returned. A fatal error should be assumed to have happened.
 
-	if the HTTP response code is 200, a JSON data would also be provided:
+	If the HTTP response code is 200, a JSON data would also be provided:
 
 		{
 			response: "{x}",
 			responseCode: "{y}"
 		}
 
-	this JSON data provides the response of the service request.
+	This JSON data provides the response of the service request.
 
 	Possible response codes are:
 
@@ -59,7 +59,7 @@ Service 1 is expected to be consumed by sensors or sensor proxies. Service reque
 
 ## Building and deployment
 
-Building service 1 is as simple as download a release, then running:
+Building service 1 is as simple as downloading a release, then running:
 
 	go build
 
@@ -68,5 +68,6 @@ in the directory of its source code.
 
 #### Deployment
 
-- Put the executable of service 1 in the machine it is expected to run on.
-- Copy files 'httpConf.yml' and 'conf.yml', and modify them, as apprpriate. These files can be found in the directory of the source code.
+- Put the executable of service 1 in the machine it is expected to run on;
+- Copy files 'httpConf.yml' and 'conf.yml' to the executable's directory. These files can be found in the directory of the source code.
+- Modify the files, as apprpriate.
