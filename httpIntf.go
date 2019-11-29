@@ -24,13 +24,15 @@ import (
 	"time"
 )
 func init () {
-	if sdsLib.InitReport () != nil {
+	errU := sdsLib.InitReport ()
+	if errU != nil {
 		errX := err.New (`Package "github.com/loc36-core/sdsLib" init failed.`, nil, nil, sdsLib.InitReport ())
 		str.PrintEtr (errLib.Fup (errX), "err", "main ()")
 		os.Exit (1)
 	}
 
-	if cntlr.InitReport () != nil {
+	errV := cntlr.InitReport ()
+	if errV != nil {
 		errX := err.New (`Package "github.com/loc36-svc/svc1-http--cntlr" init failed.`, nil, nil, cntlr.InitReport ())
 		str.PrintEtr (errLib.Fup (errX), "err", "main ()")
 		os.Exit (1)
@@ -62,10 +64,10 @@ func main () {
 	// ..1.. }
 
 	// Creating the HTTP interface. ..1.. {
-	readTimeout, errE       := time.ParseDuration (httpConf ["http.read_timeout"]        + "s")
-	readHeaderTimeout, errF := time.ParseDuration (httpConf ["http.read_header_timeout"] + "s")
-	writeTimeout, errG      := time.ParseDuration (httpConf ["http.wrte_timeout"]        + "s")
-	idleTimeout, errH       := time.ParseDuration (httpConf ["http.idle_timeout"]        + "s")
+	readTimeout, errE       := time.ParseDuration (httpConf ["read_timeout"]        + "s")
+	readHeaderTimeout, errF := time.ParseDuration (httpConf ["read_header_timeout"] + "s")
+	writeTimeout, errG      := time.ParseDuration (httpConf ["wrte_timeout"]        + "s")
+	idleTimeout, errH       := time.ParseDuration (httpConf ["idle_timeout"]        + "s")
 
 	if errE != nil {
 		errI := err.New ("Unable to create HTTP read timeout duration.", nil, nil, errE)
@@ -92,7 +94,7 @@ func main () {
 	}
 
 	intf := &http.Server {
-		Addr: fmt.Sprintf ("%s:%s", httpConf ["http.net_addr"], httpConf ["http.net_port"]),
+		Addr: fmt.Sprintf ("%s:%s", httpConf ["net_addr"], httpConf ["net_port"]),
 		ReadTimeout: readTimeout,
 		ReadHeaderTimeout: readHeaderTimeout,
 		WriteTimeout: writeTimeout,
@@ -105,10 +107,10 @@ func main () {
 
 	intf.Handler = router
 
-	notf := fmt.Sprintf ("HTTP interface addr: %s:%s [HTTPS]", httpConf ["http.net_addr"], httpConf ["http.net_port"])
+	notf := fmt.Sprintf ("HTTP interface addr: %s:%s [HTTPS]", httpConf ["net_addr"], httpConf ["net_port"])
 	str.PrintEtr (notf, "std", "main ()")
 
-	errQ := intf.ListenAndServeTLS (httpConf ["http.tls_crt"], httpConf ["http.tls_key"])
+	errQ := intf.ListenAndServeTLS (httpConf ["tls_crt"], httpConf ["tls_key"])
 
 	if errQ != nil && errQ != http.ErrServerClosed {
 		errR := err.New ("HTTP interface shutdown due to an error.", nil, nil, errQ)
@@ -136,7 +138,7 @@ func init () {
 	// ..1.. }
 
 	// Extracting pub key from file. ..1.. {
-	fileContent, errY := ioutil.ReadFile (sds ["sds.pub_key"])
+	fileContent, errY := ioutil.ReadFile (sds ["pub_key"])
 	if errY != nil {
 		errT := err.New ("Unable to read in sds pub key file.", nil, nil, errY)
 		str.PrintEtr (errLib.Fup (errT), "err", "main ()")
@@ -168,7 +170,7 @@ func init () {
 	// ..1.. }
 
 	// Establishing a conn to the SDS. ..1.. {
-	connURLFormat := "%s:%s@tcp(%s:%s)/state?tls=skip-verify&serverPubKey=dbmsPubKey&timeout=480s&writeTimeout=480s&" +
+	connURLFormat := "%s:%s@tcp(%s:%s)/service_addr?tls=skip-verify&serverPubKey=dbmsPubKey&timeout=480s&writeTimeout=480s&" +
 		"readTimeout=480s"
 
 	connURL := fmt.Sprintf (connURLFormat, url.QueryEscape (sds ["user_name"]), url.QueryEscape (sds ["user_pass"]),

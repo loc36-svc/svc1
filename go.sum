@@ -58,6 +58,8 @@ github.com/loc36-core/sdsLib v0.1.0 h1:6KW4UTeCbXpbzkSvrd+igwMBkf9wB018YAwu6UdNx
 github.com/loc36-core/sdsLib v0.1.0/go.mod h1:LyrCT24wU1LhdhgkS3Zcb0wa/z8DPkuNS6mSvlvbAgM=
 github.com/loc36-svc/svc1-http--cntlr v0.0.0-20191129022100-7101f21710c8 h1:BXfrP8pbpWXi8W1vpBUwDp+Ph8djQrLOYSNcGspyd/Y=
 github.com/loc36-svc/svc1-http--cntlr v0.0.0-20191129022100-7101f21710c8/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaA h1:3oTFQOcLddiGWDjBWY5crx5R0NICC2G8gDaEptYRm1g=
+github.com/loc36-svc/svc1-http--cntlr v0.1.0-alphaA/go.mod h1:+MuM6MRws7z3HR8dIW46rcbWTwt+j/5LCvFBUV+/Ymw=
 github.com/loc36-svc/svc1-http--lib v0.3.0 h1:ZbO0cWt2pMGL2DaAdxGxLeW3hlFdtlXgojG7Skf7UVg=
 github.com/loc36-svc/svc1-http--lib v0.3.0/go.mod h1:6A8SwtbFFbiENwZqPcbdHg1iB/A3A2w7C5sy4A16wx0=
 github.com/loc36-svc/svc1-svc1--svc v0.5.0 h1:tsrzn6v5baxUftmvaNvPvk/THIP9S/jOwRFE6qOU/pw=
@@ -150,6 +152,7 @@ golang.org/x/sys v0.0.0-20181116152217-5ac8a444bdc5/go.mod h1:STP8DvDyc/dI5b8T5h
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223 h1:DH4skfRX4EBpamg7iV4ZlCpblAHI6s6TDM39bFZumv8=
 golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
 golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
