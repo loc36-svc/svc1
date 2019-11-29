@@ -1,0 +1,26 @@
+# When deploying a software using function Conf (), the following should be done:
+#   this file should be copied to the directory of the software's executable;
+#   set the conf data, as appropriate.
+
+# sds-related conf data
+sds:
+  net_addr: "sds.core.loc36.com"  # SDS net addr. Valid domain name, ipv4, or iv6.
+  net_port: 50002                 # SDS net port. Valid port no. Port 0 not allowed.
+  user_name: ""                   # SDS username. Empty string not allowed.
+  user_pass: ""                   # SDS password. Empty string not allowed.
+  pub_key: ""                     # SDS pem pub key filepath. Relative and absolute path
+        # supported.
+  update_pass: ""                 # SDS record update password. Empty string not allowed.
+
+# http-related conf data
+http:
+  net_addr: "0.0.0.0"       # HTTP interface net addr. Ipv4 only.
+  net_port: 60001           # HTTP interface net port. Port 0 not allowed.
+  tls_key: ""               # HTTP interface tls cert flepath. Relative and absolute path
+        # supported.
+  tls_crt: ""               # HTTP interface tls private key filepath. Relative and
+        # absolute path supported.
+  read_timeout: 480         # HTTP interface read timeout.        Value: 1 <= x <= 960
+  read_header_timeout: 480  # HTTP interface read header timeout. Value: 1 <= x <= 960
+  wrte_timeout: 480         # HTTP interface write timeout.       Value: 1 <= x <= 960
+  idle_timeout: 480         # HTTP interface idle timeout.        Value: 1 <= x <= 960
